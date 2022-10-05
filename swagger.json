@@ -1,0 +1,136 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Swagger",
+    "description": "Swagger",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Actor",
+      "description": "API for actor"
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/actor": {
+      "get": {
+        "tags": ["Actor"],
+        "summary": "Get all Actor",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Actor"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Actor"],
+        "description": "Create new Actor",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "Actor that we want to create",
+            "schema": {
+              "$ref": "#/definitions/Actor"
+            }
+          }
+        ],
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "New Actor is created",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/actor/{id}": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "ID of actor that we want to find",
+            "type": "integer"
+          }
+        ],
+        "put": {
+          "summary": "Update actor with give ID",
+          "tags": ["Actor"],
+          "parameters": [
+            {
+              "name": "actor",
+              "in": "body",
+              "description": "Actor with new values of properties",
+              "schema": {
+                "$ref": "#/definitions/Actor"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "User is updated",
+              "schema": {
+                "$ref": "#/definitions/Actor"
+              }
+            }
+          }
+        },
+        "get": {
+            "tags": ["Actor"],
+            "summary": "Get  Actor By Id",
+            "responses": {
+              "200": {
+                "description": "OK",
+                "schema": {
+                  "$ref": "#/definitions/Actor"
+                }
+              }
+            }
+        },
+        "delete": {
+            "summary": "Delete actor with given Id",
+            "tags": ["Actor"],
+            "responses": {
+              "200": {
+                "description": "Actor is deleted",
+                "schema": {
+                  "$ref": "#/definitions/Actor"
+                }
+              }
+            }
+          }
+      }
+  },
+  "definitions": {
+    "Actor": {
+      "required": ["first_name", "last_name"],
+      "properties": {
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "Actor": {
+    "type": "array",
+    "$ref": "#/definitions/Actor"
+  }
+}

@@ -13,6 +13,7 @@ const swaggerUi = require('swagger-ui-express'),
   swaggerDocument = require('./swagger.json');
 
 app.use('/actor', require('./routes/actor.route'));
+app.use('/actors', require('./routes/actor.route'));
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // app.get('/', function (req, res) {

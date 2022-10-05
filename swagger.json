@@ -38,7 +38,7 @@
         "description": "Create new Actor",
         "parameters": [
           {
-            "name": "user",
+            "name": "actor",
             "in": "body",
             "description": "Actor that we want to create",
             "schema": {
@@ -51,7 +51,7 @@
           "200": {
             "description": "New Actor is created",
             "schema": {
-              "$ref": "#/definitions/User"
+              "$ref": "#/definitions/Actor"
             }
           }
         }
@@ -82,7 +82,7 @@
           ],
           "responses": {
             "200": {
-              "description": "User is updated",
+              "description": "Actor is updated",
               "schema": {
                 "$ref": "#/definitions/Actor"
               }

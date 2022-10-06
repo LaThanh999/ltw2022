@@ -1,9 +1,9 @@
 const express = require('express');
 
 const router = express.Router();
-const { getAll, getById, insert, edit, remove } = require('../controllers/actor.controllers');
+const { getAll, getById, insert, edit, remove } = require('../controllers/customer.controllers');
 const mdwValidate = require('../middlewares/validate.mdw');
-const schema = require('../schemas/actor.json');
+const schema = require('../schemas/customer.json');
 
 router.get('/', getAll);
 router.get('/:id', getById);

@@ -1,3 +1,4 @@
+const { error } = require('winston');
 const actorModel = require('../models/actor.model');
 
 exports.getAll = async (req, res) => {

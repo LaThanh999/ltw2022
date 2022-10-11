@@ -1,0 +1,8 @@
+error: Oct-11-2022 22:46:42: 	404 ||  Not Found - URL: / -  Method: GET
+error: Oct-11-2022 22:46:42: 	404 ||  Not Found - URL: /favicon.ico -  Method: GET
+info: Oct-11-2022 22:46:59: 	Method: GET - URL: /actor - Successfully
+info: Oct-11-2022 22:47:02: 	Method: GET - URL: /actor - Successfully
+error: Oct-11-2022 22:47:16: 	Method: POST - URL: /actor - Message: must have required property 'last_name'
+info: Oct-11-2022 22:48:33: 	Method: GET - URL: /actor - Successfully
+error: Oct-11-2022 22:48:34: 	500 - Internal Server Error - getaddrinfo ENOTFOUND dasdas - URL: /actor - Method: GET
+error: Oct-11-2022 22:49:02: 	404 ||  Not Found - URL: /dasda -  Method: GET

@@ -6,3 +6,4 @@ error: Oct-11-2022 22:47:16: 	Method: POST - URL: /actor - Message: must have re
 info: Oct-11-2022 22:48:33: 	Method: GET - URL: /actor - Successfully
 error: Oct-11-2022 22:48:34: 	500 - Internal Server Error - getaddrinfo ENOTFOUND dasdas - URL: /actor - Method: GET
 error: Oct-11-2022 22:49:02: 	404 ||  Not Found - URL: /dasda -  Method: GET
+error: Oct-11-2022 23:22:14: 	404 ||  Not Found - URL: / -  Method: GET

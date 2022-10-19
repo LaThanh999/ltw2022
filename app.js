@@ -13,7 +13,11 @@ app.use(cors());
 const swaggerUi = require('swagger-ui-express'),
   swaggerDocument = require('./swagger.json');
 
-app.use('/actor', require('./routes/actor.route'));
+const authMdw = require('./middlewares/auth.mdw');
+
+app.use('/login', require('./routes/auth.route'));
+app.use('/users', require('./routes/users.route'));
+app.use('/actor', authMdw, require('./routes/actor.route'));
 app.use('/customer', require('./routes/customer.route'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
